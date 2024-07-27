@@ -23,14 +23,26 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Install dependencies
-      working-directory: worksheet2
+    - name: Install dependencies for my-nest-app
+      working-directory: worksheet2/my-nest-app
       run: npm install
 
-    - name: Run the tests
-      working-directory: worksheet2
+    - name: Run tests for my-nest-app
+      working-directory: worksheet2/my-nest-app
       run: npm test
 
-    - name: Build
-      working-directory: worksheet2
+    - name: Build my-nest-app
+      working-directory: worksheet2/my-nest-app
+      run: npm run build
+
+    - name: Install dependencies for my-react-app
+      working-directory: worksheet2/my-react-app
+      run: npm install
+
+    - name: Run tests for my-react-app
+      working-directory: worksheet2/my-react-app
+      run: npm test
+
+    - name: Build my-react-app
+      working-directory: worksheet2/my-react-app
       run: npm run build
