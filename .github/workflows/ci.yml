@@ -1,9 +1,6 @@
-name: CI_action
-on: 
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+name: CI action
+
+on: [push]
 
 jobs:
   build:
@@ -29,4 +26,4 @@ jobs:
     - name: Build
       run: |
         cd worksheet2/my-nest-app
-        npm build
+        npm run build
