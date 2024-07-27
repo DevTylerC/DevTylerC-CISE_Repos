@@ -17,8 +17,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-        with:
-          repository: DevTylerC/CISE_Repos
 
       - name: Set up Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
