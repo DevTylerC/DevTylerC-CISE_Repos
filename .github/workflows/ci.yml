@@ -5,7 +5,9 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+    strategy:
+      matrix:
+        node-version: [13.x]
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
